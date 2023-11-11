@@ -15,3 +15,11 @@ print(group_object.mean("Salary"))
 print(group_object.mean(numeric_only=True))
 
 print(group_object.describe())
+
+print(salary_dataframe["Programming Language"].unique())
+print(salary_dataframe["Programming Language"].nunique())
+
+def grossToNet(salary):
+    return salary * 0.65
+
+print(salary_dataframe["Salary"].apply(grossToNet))
